@@ -1,0 +1,18 @@
+version = 1
+requires-python = ">=3.13"
+
+[[package]]
+name = "example-python-app"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "example-python-library" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "example-python-library", git = "https://github.com/cgravill/example_python_library.git" }]
+
+[[package]]
+name = "example-python-library"
+version = "0.1.0"
+source = { git = "https://github.com/cgravill/example_python_library.git#2ada4bd15263ff03fbd947fd4eb0d77c6e597ea0" }
